@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 @SpringBootApplication
@@ -34,6 +35,10 @@ public class CopaDoMundoApplication {
     public ModelMapper modelMapper() {
         ModelMapper modelMapper = new ModelMapper();
         return modelMapper;
+    }
+    @Bean
+    public PasswordEncoder obterPasswordEncoder(){
+        return
     }
 
 }
